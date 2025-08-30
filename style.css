@@ -19,3 +19,25 @@ button:hover {
 .header .colored-button {
     border-radius: 50rem;
 }
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main-content";
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.header {
+    grid-area: header;
+
+}
+
+.main-content {
+    grid-area: main-content;
+}
