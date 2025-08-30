@@ -1,0 +1,21 @@
+:root {
+    --sidebar-color: rgb(77, 158, 220);
+}
+
+button {
+    border: none;
+    margin: 0;
+}
+
+.colored-button {
+    background-color: var(--sidebar-color);
+    color: white;
+}
+
+button:hover {
+    opacity: .7;
+}
+
+.header .colored-button {
+    border-radius: 50rem;
+}
