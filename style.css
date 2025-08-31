@@ -47,12 +47,34 @@ a {
 .container {
     width: 100%;
     display: grid;
-    grid-template-rows: 5vh 10vh 80vh;
+    grid-template-rows: 15vh 85vh;
     grid-template-columns: minmax(200px, 300px) 5fr;
     grid-template-areas: 
-        "sidebar-top header-top"
-        "sidebar-bottom header-bottom"
-        "sidebar-bottom main-content";
+        "sidebar header"
+        "sidebar header"
+        "sidebar main-content";
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 5vh 95vh;
+    grid-template-areas:
+        "sidebar-top" 
+        "sidebar-bottom";
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 5vh 10vh;
+    grid-template-areas: 
+        "header-top"
+        "header-bottom";
+}
+
+.main-content {
+    grid-area: main-content;
 }
 
 .sidebar-bottom, 
@@ -120,7 +142,7 @@ a {
 }
 
 .header-top-right {
-    padding-right:1rem;
+    padding-right: 1rem;
     display: grid;
     grid-template-columns: 2.5em 2.5em 7.5em;
     gap: 2vw;
@@ -142,10 +164,6 @@ a {
 .header-bottom {
     font-size: 1rem;
     grid-area: header-bottom;
-}
-
-.main-content {
-    grid-area: main-content;
 }
 
 /* To do: Consider removing the dashboard link and just have text. Alternatively, when making the quick html files for all links, just replace dashboard with a different text.
