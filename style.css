@@ -2,6 +2,10 @@
     --sidebar-color: rgb(77, 158, 220);
 }
 
+* {
+    margin: 0;
+}
+
 button {
     border: none;
     margin: 0;
@@ -20,10 +24,15 @@ button:hover {
     border-radius: 50rem;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .container {
     display: grid;
-    grid-template-rows: 1fr 5fr;
-    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 20vh 80vh;
+    grid-template-columns: 2fr 7fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar main-content";
@@ -31,6 +40,11 @@ button:hover {
 
 .sidebar {
     grid-area: sidebar;
+    background-color: var(--sidebar-color);
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(2.5rem, 3rem));
+    color: white;
+    justify-content: start;
 }
 
 .header {
