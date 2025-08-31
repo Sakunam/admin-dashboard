@@ -1,7 +1,8 @@
 :root {
-    --sidebar-color: rgb(77, 158, 220);
+    --sidebar-color: rgb(69, 157, 224);
     --sidebar-icon-width: .75rem;
     --header-color: white;
+    --header-height: 17vh;
     --main-content-color: lightgray;
     --top-section-top-padding: .8rem;
     --profile-pic-width: 2.5em;
@@ -44,7 +45,7 @@ a {
 .container {
     width: 100%;
     display: grid;
-    grid-template-rows: 15vh minmax(85vh, auto);
+    grid-template-rows: var(--header-height) minmax(calc(100vh - var(--header-height)), auto);
     grid-template-columns: minmax(200px, 300px) 5fr;
     grid-template-areas: 
         "sidebar header"
@@ -67,7 +68,7 @@ a {
     grid-template-areas: 
         "header-top"
         "header-bottom";
-    row-gap: 1rem;
+    box-shadow: 0px .2rem .2rem 0px rgb(193, 188, 188);
 }
 
 .main-content {
