@@ -43,9 +43,10 @@ a {
 }
 
 .container {
+    width: 100%;
     display: grid;
     grid-template-rows: 10vh 10vh 80vh;
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: minmax(200px, 300px) 5fr;
     grid-template-areas: 
         "sidebar-top header-top"
         "sidebar-bottom header-bottom"
@@ -138,4 +139,4 @@ a {
     grid-area: main-content;
 }
 
-/* To do: fix the home button overlapping the dashboard button when window size shrinks. Additionally, consider removing the dashboard link and just have text. Alternatively, when making the quick html files for all links, just replace dashboard with a different text.
+/* To do: Consider removing the dashboard link and just have text. Alternatively, when making the quick html files for all links, just replace dashboard with a different text.
