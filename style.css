@@ -44,7 +44,7 @@ a {
 .container {
     width: 100%;
     display: grid;
-    grid-template-rows: 15vh 85vh;
+    grid-template-rows: 15vh minmax(85vh, auto);
     grid-template-columns: minmax(200px, 300px) 5fr;
     grid-template-areas: 
         "sidebar header"
@@ -54,7 +54,7 @@ a {
 .sidebar {
     grid-area: sidebar;
     display: grid;
-    grid-template-rows: 5vh 95vh;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
         "sidebar-top" 
         "sidebar-bottom";
@@ -63,10 +63,11 @@ a {
 .header {
     grid-area: header;
     display: grid;
-    grid-template-rows: 5vh 10vh;
+    grid-template-rows: auto;
     grid-template-areas: 
         "header-top"
         "header-bottom";
+    row-gap: 1rem;
 }
 
 .main-content {
@@ -98,6 +99,7 @@ a {
 .sidebar-bottom {
     grid-area: sidebar-bottom;
     padding-top: calc(2.5 * (var(--top-section-top-padding)));
+    min-height: 85vh;
 }
 
 .sidebar-link {
@@ -211,10 +213,6 @@ a {
     justify-content: end;
     gap: 1rem;
     padding-right: 2rem;
-}
-
-.media-buttons {
-    text-align: center;
 }
 
 .media-buttons .colored-button {
