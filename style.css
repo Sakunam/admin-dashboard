@@ -48,7 +48,6 @@ a {
     grid-template-columns: minmax(200px, 300px) 5fr;
     grid-template-areas: 
         "sidebar header"
-        "sidebar header"
         "sidebar main-content";
 }
 
