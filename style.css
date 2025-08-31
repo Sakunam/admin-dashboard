@@ -47,7 +47,7 @@ a {
 .container {
     width: 100%;
     display: grid;
-    grid-template-rows: 10vh 10vh 80vh;
+    grid-template-rows: 5vh 10vh 80vh;
     grid-template-columns: minmax(200px, 300px) 5fr;
     grid-template-areas: 
         "sidebar-top header-top"
@@ -56,7 +56,8 @@ a {
 }
 
 .sidebar-bottom, 
-.sidebar-top {
+.sidebar-top,
+.header-top {
     background-color: var(--sidebar-color);
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(1.5rem, 2rem));
@@ -71,12 +72,14 @@ a {
     padding-left: 6px;
 }
 
-.dashboard, .sidebar-link {
+.dashboard, 
+.sidebar-link {
     margin-left: 2rem;
 }
 
 .sidebar-bottom {
     grid-area: sidebar-bottom;
+    padding-top: calc(2.5 * (var(--top-section-top-padding)));
 }
 
 .sidebar-link {
@@ -88,7 +91,6 @@ a {
     font-size: .9rem;
     font-weight: bold;
     background-color: var(--header-color);
-    padding-top: var(--top-section-top-padding);
     grid-area: header-top;
     display: grid;
     grid-template-columns: 45vw 1fr;
@@ -104,10 +106,6 @@ a {
     padding-left: clamp(1rem, 5vw, 3rem);
 }
 
-.profile-pic {
-    width: 2.5em;
-}
-
 .search-bar {
     width: clamp(3rem, 40vw, 100rem);
     height: 1.5rem;
@@ -115,6 +113,10 @@ a {
     border: none;
     background-color: lightgray;
     align-self: start;
+}
+
+.profile-pic {
+    width: 2.5em;
 }
 
 .header-top-right {
