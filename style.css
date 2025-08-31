@@ -39,36 +39,45 @@ a {
     padding-left: 1rem;
 }
 
-.sidebar .icon, 
-.sidebar .a {
-    display: inline-block;
-}
-
 .container {
     display: grid;
-    grid-template-rows: 20vh 80vh;
+    grid-template-rows: 10vh 10vh 80vh;
     grid-template-columns: 2fr 7fr;
     grid-template-areas: 
-        "sidebar header"
-        "sidebar main-content";
+        "sidebar-top header-top"
+        "sidebar-bottom header-bottom"
+        "sidebar-bottom main-content";
 }
 
-.sidebar {
-    grid-area: sidebar;
+.sidebar-bottom, 
+.sidebar-top {
+    grid-area: sidebar-bottom;
     background-color: var(--sidebar-color);
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(2.5rem, 3rem));
+    grid-template-rows: repeat(auto-fill, minmax(1.5rem, 2rem));
     justify-content: start;
+}
+
+.sidebar-top {
+    grid-area: sidebar-top;
+}
+
+.sidebar-top .sidebar-link {
+    font-size: 1.2rem;
 }
 
 .sidebar-link {
     margin-left: 2rem;
     justify-self: start;
+    font-size: 1.01rem;
 }
 
-.header {
-    grid-area: header;
+.header-top {
+    grid-area: header-top;
+}
 
+.header-bottom {
+    grid-area: header-bottom;
 }
 
 .main-content {
