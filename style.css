@@ -72,6 +72,12 @@ a {
 
 .main-content {
     grid-area: main-content;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+        "projects announcements"
+        "projects trending"
 }
 
 .sidebar-bottom, 
@@ -221,4 +227,16 @@ a {
     height: 2rem;
     display: block;
     text-align: center;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
