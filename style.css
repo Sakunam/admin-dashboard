@@ -1,6 +1,9 @@
 :root {
     --sidebar-color: rgb(77, 158, 220);
     --sidebar-icon-width: .75rem;
+    --header-color: white;
+    --main-content-color: lightgray;
+    --top-section-top-padding: .8rem;
 }
 
 * {
@@ -10,7 +13,7 @@
 button {
     border: none;
     margin: 0;
-    font-weight: 1000;
+    font-weight: bold;
 }
 
 .colored-button {
@@ -58,12 +61,13 @@ a {
     justify-content: start;
 }
 
-.sidebar-top {
-    grid-area: sidebar-top;
-}
-
 .sidebar-top .sidebar-link {
     font-size: 1.2rem;
+}
+
+.sidebar-top {
+    grid-area: sidebar-top;
+    padding-top: var(--top-section-top-padding);
 }
 
 .sidebar-link {
@@ -73,10 +77,59 @@ a {
 }
 
 .header-top {
+    font-size: .8rem;
+    background-color: var(--header-color);
+    padding-top: var(--top-section-top-padding);
     grid-area: header-top;
+    display: grid;
+    grid-template-columns: 50vw 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: var(--sidebar-icon-width) 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding-left: clamp(1rem, 5vw, 3rem);
+}
+
+.profile-pic {
+    width: 2.5em;
+}
+
+.search-bar {
+    width: clamp(3rem, 40vw, 100rem);
+    height: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: lightgray;
+    align-self: start;
+}
+
+.header-top-right {
+    padding-right: 5rem;
+    display: grid;
+    grid-template-columns: 2.5em 2.5em 7.5em;
+    gap: 2vw;
+    justify-items: center;
+    align-items: center;
+    justify-self: end;
+}
+
+.search-icon, .notification-bell {
+    width: 1em;
+    height: 1em;
+}
+
+.notification-bell {
+    background-image: url(./images/placeholder.svg);
+    background-color: var(--header-color);
 }
 
 .header-bottom {
+    font-size: 1rem;
     grid-area: header-bottom;
 }
 
