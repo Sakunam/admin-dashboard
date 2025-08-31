@@ -1,5 +1,6 @@
 :root {
     --sidebar-color: rgb(77, 158, 220);
+    --sidebar-icon-width: .75rem;
 }
 
 * {
@@ -9,15 +10,19 @@
 button {
     border: none;
     margin: 0;
+    font-weight: 1000;
 }
 
 .colored-button {
     background-color: var(--sidebar-color);
     color: white;
+    display: grid;
+    grid-template-columns: var(--sidebar-icon-width) 1fr;
+    align-items: center;
 }
 
 button:hover {
-    opacity: .7;
+    opacity: .85;
 }
 
 .header .colored-button {
@@ -27,6 +32,16 @@ button:hover {
 a {
     color: white;
     text-decoration: none;
+}
+
+.icon {
+    width: var(--sidebar-icon-width);
+    padding-left: 1rem;
+}
+
+.sidebar .icon, 
+.sidebar .a {
+    display: inline-block;
 }
 
 .container {
@@ -43,8 +58,12 @@ a {
     background-color: var(--sidebar-color);
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(2.5rem, 3rem));
-    color: white;
     justify-content: start;
+}
+
+.sidebar-link {
+    margin-left: 2rem;
+    justify-self: start;
 }
 
 .header {
