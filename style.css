@@ -8,6 +8,7 @@
     --profile-pic-width: 2.5em;
     --box-shadow-color: rgba(168, 168, 178, 0.601);
     --gray-background-color: rgba(15, 55, 100, 0.155);
+    --header-box-shadow-size: 0rem;
 }
 
 * {
@@ -70,8 +71,8 @@ a {
     grid-template-areas: 
         "header-top"
         "header-bottom";
-    box-shadow: 0px .2rem 0rem 0px var(--box-shadow-color);
-    margin-bottom: .2rem;
+    box-shadow: 0px .2rem var(--header-box-shadow-size) 0px var(--box-shadow-color);
+    margin-bottom: var(--header-box-shadow-size);
 }
 
 .main-content {
